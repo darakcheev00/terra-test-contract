@@ -4,7 +4,12 @@ use cosmwasm_schema::{cw_serde, QueryResponses};
 pub struct InstantiateMsg {}
 
 #[cw_serde]
-pub enum ExecuteMsg {}
+pub enum ExecuteMsg {
+    HydrateMessage {
+        msg: String,
+        vars: String,
+    }
+}
 
 #[cw_serde]
 #[derive(QueryResponses)]
