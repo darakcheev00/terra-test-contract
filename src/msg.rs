@@ -8,7 +8,7 @@ pub enum ExecuteMsg {
     HydrateMessage {
         msg: String,
         vars: String,
-    }
+    },
 }
 
 #[cw_serde]
