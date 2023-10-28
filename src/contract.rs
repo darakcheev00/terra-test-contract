@@ -31,7 +31,7 @@ pub fn execute(
     msg: ExecuteMsg,
 ) -> Result<Response, ContractError> {
     match msg {
-        ExecuteMsg::HydrateMessage { msg, vars } => execute_hydrate_msg(msg, vars),
+        ExecuteMsg::HydrateMsg { msg, vars } => execute_hydrate_msg(msg, vars),
     }
 }
 
@@ -112,6 +112,9 @@ fn execute_hydrate_msg(msg: String, vars: String) -> Result<Response,ContractErr
 /*
  * Description
  * Recursively hydrates the base64 encoded message and all encoded sub messages.
+ * The serde_json crate is used to decode all inner sub-messages, because they cannot be strongly typed. 
+ * The base64 encoded string can be of any type and structure, therefore the serde_json_wasm crate is not sufficient.
+ * In this situation, the serde_json crate is required to deserialize a generic json string.
  * 
  * Param            Type                        Description
  * msg              &mut Binary                 Binary msg than needs to be decoded, hydrated, and encoded.

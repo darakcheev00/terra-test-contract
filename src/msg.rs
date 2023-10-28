@@ -5,7 +5,7 @@ pub struct InstantiateMsg {}
 
 #[cw_serde]
 pub enum ExecuteMsg {
-    HydrateMessage {
+    HydrateMsg {
         msg: String,
         vars: String,
     },
