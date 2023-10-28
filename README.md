@@ -32,8 +32,8 @@ Example:
 ```rust
     use contract::ExecuteMsg;
     let hydrate_msg = ExecuteMsg::HydrateMessage {
-        msg: "Sample message",
-        vars: "Sample variables",
+        msg: "cosmos msg",
+        vars: "['$warp.var.variable1':'123456']",
     };
 ```
 ## Smart Contract Response
