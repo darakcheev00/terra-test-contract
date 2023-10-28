@@ -1,7 +1,7 @@
 
 # Warp Test Contract - Hydrating Messages
 
-This smart contract is designed to hydrate string messages by replacing variables with their respective values. The variable mapping (name: value) is provided by the user. All sub-messages of the main message, (base64-encoded and plaintext), are also hydrated.
+This smart contract is designed to hydrate string messages by replacing variables with their respective values. The variable mapping (name: value) is provided by the user. All sub-messages of the main message, (base64-encoded and plaintext), are also hydrated. A CosmosMsg is returned containing the hydrated message.
 
 ## Smart Contract Messages
 
