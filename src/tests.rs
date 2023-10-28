@@ -39,7 +39,7 @@ fn test_hydrate_msg_wasm_execute() {
     .to_string();
 
     // Create message to hydrate the string
-    let msg = ExecuteMsg::HydrateMessage {
+    let msg = ExecuteMsg::HydrateMsg {
         msg: cosmos_msg1.clone(),
         vars: test_vars,
     };
@@ -95,7 +95,7 @@ fn test_hydrate_msg_ibc_send_packet() {
     .to_string();
 
     // Create message to hydrate the string
-    let msg = ExecuteMsg::HydrateMessage {
+    let msg = ExecuteMsg::HydrateMsg {
         msg: cosmos_msg1.clone(),
         vars: test_vars,
     };
